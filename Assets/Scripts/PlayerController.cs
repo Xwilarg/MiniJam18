@@ -8,8 +8,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private const float speed = 300f;
-    private const float jumpMinDist = .5f;
+    private const float jumpMinDistY = .5f;
+    private const float jumpMinDistX = .4f;
     private const float jumpForce = 5f;
+    private const float wallJumpForce = 2.5f;
 
     private DreamManager dm;
 
@@ -26,16 +28,43 @@ public class PlayerController : MonoBehaviour
         npcInterraction = null;
     }
 
+    private enum XDirection
+    {
+        None,
+        Left,
+        Right
+    }
+
     private void Update()
     {
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * speed, rb.velocity.y);
+        XDirection dir = XDirection.None;
         if (rb.velocity.x < -float.Epsilon)
+        {
             sr.flipX = true;
+            dir = XDirection.Left;
+        }
         else if (rb.velocity.x > float.Epsilon)
+        {
             sr.flipX = false;
+            dir = XDirection.Right;
+        }
         if (Input.GetButtonDown("Jump"))
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDist, 1 << 8);
+            Vector2? raycastDir = null;
+            if (dir == XDirection.Right)
+                raycastDir = transform.right;
+            else if (dir == XDirection.Left)
+                raycastDir = -transform.right;
+            if (raycastDir != null)
+            {
+                RaycastHit2D hitWall = Physics2D.Raycast(transform.position, raycastDir.Value, jumpMinDistX, 1 << 8);
+                if (hitWall.distance > float.Epsilon)
+                {
+                    rb.AddForce(raycastDir.Value * wallJumpForce, ForceMode2D.Impulse);
+                }
+            }
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDistY, 1 << 8);
             if (hit.distance > float.Epsilon)
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
@@ -44,9 +73,7 @@ public class PlayerController : MonoBehaviour
             if (!isMain)
                 dm.LoadMain();
             else if (npcInterraction != null)
-            {
                 dm.LoadScene(npcInterraction.Id);
-            }
         }
     }
 
