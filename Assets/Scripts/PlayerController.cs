@@ -22,6 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private bool isMain;
 
+    private Vector2 spawnPos;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
         externalX = 0f;
+        spawnPos = transform.position;
     }
 
     private enum XDirection
@@ -76,7 +79,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (!isMain)
+            {
+                transform.position = spawnPos;
                 dm.LoadMain();
+            }
             else if (npcInterraction != null)
                 dm.LoadScene(npcInterraction.Id);
         }
@@ -89,6 +95,8 @@ public class PlayerController : MonoBehaviour
             npcInterraction = collision.GetComponent<NPC>();
             collision.transform.GetChild(0).gameObject.SetActive(true);
         }
+        else if (collision.CompareTag("Spikes"))
+            transform.position = spawnPos;
 
     }
 
