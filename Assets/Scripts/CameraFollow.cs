@@ -5,11 +5,18 @@ public class CameraFollow : MonoBehaviour
     [SerializeField]
     private Transform toFollow;
 
+    private Vector3 offset;
+
+    private void Start()
+    {
+        offset = (Vector2)(transform.position - toFollow.position);
+    }
+
     private void Update()
     {
-        float x = toFollow.position.x;
-        if (x < 0f)
-            x = 0f;
-        transform.position = new Vector3(x, transform.position.y, transform.position.z);
+        Vector2 pos = toFollow.position;
+        if (pos.x < 0f)
+            pos = new Vector2(0f, pos.y);
+        transform.position = new Vector3(pos.x, pos.y, transform.position.z) + offset;
     }
 }

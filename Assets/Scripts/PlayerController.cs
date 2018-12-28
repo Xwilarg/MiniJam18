@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
@@ -11,11 +10,14 @@ public class PlayerController : MonoBehaviour
     private const float jumpMinDistY = .5f;
     private const float jumpMinDistX = .4f;
     private const float jumpForce = 5f;
-    private const float wallJumpForce = 2.5f;
+    private const float wallJumpForce = 25f;
+    private const float xDrag = 1.1f;
 
     private DreamManager dm;
 
     private NPC npcInterraction;
+
+    private float externalX;
 
     [SerializeField]
     private bool isMain;
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
+        externalX = 0f;
     }
 
     private enum XDirection
@@ -37,7 +40,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * speed, rb.velocity.y);
+        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * speed + externalX, rb.velocity.y);
+        externalX /= xDrag;
         XDirection dir = XDirection.None;
         if (rb.velocity.x < -float.Epsilon)
         {
@@ -61,7 +65,8 @@ public class PlayerController : MonoBehaviour
                 RaycastHit2D hitWall = Physics2D.Raycast(transform.position, raycastDir.Value, jumpMinDistX, 1 << 8);
                 if (hitWall.distance > float.Epsilon)
                 {
-                    rb.AddForce(raycastDir.Value * wallJumpForce, ForceMode2D.Impulse);
+                    externalX += -raycastDir.Value.x * wallJumpForce;
+                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 }
             }
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDistY, 1 << 8);
