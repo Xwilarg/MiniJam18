@@ -5,27 +5,25 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private CameraFollow camFollow;
-
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private const float speed = 300f;
     private const float jumpMinDist = .5f;
     private const float jumpForce = 5f;
 
-    private List<GameObject> colliders;
-
-    private bool inDream;
+    private DreamManager dm;
 
     private NPC npcInterraction;
+
+    [SerializeField]
+    private bool isMain;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
-        colliders = new List<GameObject>();
     }
 
     private void Update()
@@ -43,33 +41,17 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            inDream = !inDream;
-            camFollow.enabled = !camFollow.enabled;
-            npcInterraction.transform.GetChild(0).gameObject.SetActive(false);
-            if (colliders.Count > 0)
+            if (!isMain)
+                dm.LoadMain();
+            else if (npcInterraction != null)
             {
-                foreach (GameObject go in colliders)
-                    Destroy(go);
-                colliders.RemoveAll(x => true);
-            }
-            else
-            {
-                GameObject go = new GameObject("Collider left", typeof(BoxCollider2D));
-                go.transform.position = new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, 10f)).x, 0f);
-                go.GetComponent<BoxCollider2D>().size = new Vector2(0.01f, 10f);
-                colliders.Add(go);
-                go = new GameObject("Collider right", typeof(BoxCollider2D));
-                go.transform.position = new Vector2(Camera.main.ViewportToWorldPoint(new Vector3(1f, 0f, 10f)).x, 0f);
-                go.GetComponent<BoxCollider2D>().size = new Vector2(0.01f, 10f);
-                colliders.Add(go);
+                dm.LoadScene(npcInterraction.Id);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (inDream)
-            return;
         if (collision.CompareTag("NPC"))
         {
             npcInterraction = collision.GetComponent<NPC>();
@@ -80,8 +62,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (inDream)
-            return;
         if (collision.CompareTag("NPC"))
         {
             npcInterraction = null;
