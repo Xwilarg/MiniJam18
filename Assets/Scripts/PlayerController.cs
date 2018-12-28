@@ -63,18 +63,24 @@ public class PlayerController : MonoBehaviour
                 raycastDir = transform.right;
             else if (dir == XDirection.Left)
                 raycastDir = -transform.right;
-            if (raycastDir != null)
+            bool isDone = false;
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDistY, 1 << 8);
+            bool onFloor = (hit.distance > float.Epsilon);
+            if (raycastDir != null && !onFloor)
             {
                 RaycastHit2D hitWall = Physics2D.Raycast(transform.position, raycastDir.Value, jumpMinDistX, 1 << 8);
                 if (hitWall.distance > float.Epsilon)
                 {
                     externalX += -raycastDir.Value.x * wallJumpForce;
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                    rb.velocity = new Vector2(rb.velocity.x, 0f);
+                    rb.AddForce(Vector2.up * jumpForce * 1.75f, ForceMode2D.Impulse);
+                    isDone = true;
                 }
             }
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDistY, 1 << 8);
-            if (hit.distance > float.Epsilon)
+            if (!isDone && onFloor)
+            {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
