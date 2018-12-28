@@ -6,6 +6,8 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private GameObject toSpawn;
 
+    private const int maxCrate = 5;
+
     private List<GameObject> allGos;
 
     private void Start()
@@ -23,5 +25,10 @@ public class Spawner : MonoBehaviour
     public void Spawn()
     {
         allGos.Add(Instantiate(toSpawn, transform.position, Quaternion.identity));
+        if (allGos.Count > maxCrate)
+        {
+            Destroy(allGos[0]);
+            allGos.RemoveAt(0);
+        }
     }
 }
