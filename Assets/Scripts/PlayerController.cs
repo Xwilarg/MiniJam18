@@ -131,6 +131,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
+        rb.velocity = Vector2.zero;
         transform.position = spawnPos;
         if (inter != null)
         {

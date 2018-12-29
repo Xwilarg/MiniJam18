@@ -9,7 +9,16 @@ public class GameManager : MonoBehaviour
     private GameObject homePoint;
     public IDictionary<string, bool> events = new Dictionary<string, bool>() {
         {"level00spawn", false},
-        {"level01spawn", false}
+        {"level01object", false },
+        {"level01spawn", false},
+        {"level02object", false },
+        {"level02spawn:", false },
+        {"level03object", false },
+        {"level03spawn", false},
+        {"level04object", false },
+        {"level04spawn", false },
+        {"level05object", false },
+        {"level05spawn", false }
 
     };
 

@@ -13,6 +13,7 @@ public class MoveToLevelNPC : MonoBehaviour
   void Update() {
 
     if(Input.GetKeyDown(KeyCode.E) && trigger) {
+      UIManager.instance.HideDialog();
       SceneManager.LoadScene(levelToLoad);
     } 
         
