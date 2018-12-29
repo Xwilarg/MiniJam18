@@ -137,6 +137,12 @@ public class PlayerController : MonoBehaviour
             inter.transform.GetChild(0).gameObject.SetActive(false);
             inter = null;
         }
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Spikes"))
+        {
+            var c = go.GetComponent<EnemyController>();
+            if (c != null)
+                c.ResetAll();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
