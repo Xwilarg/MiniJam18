@@ -52,9 +52,7 @@ public class PlayerController : MonoBehaviour
         externalX /= xDrag;
         XDirection dir = XDirection.None;
 
-
-
-        if (rb.velocity.x > 0 || rb.velocity.x < 0 && rb.velocity.y == 0) {
+        if (rb.velocity.x > 0.1f || rb.velocity.x < -0.1f && rb.velocity.y == 0) {
             anim.SetBool("moving", true);
         } else {
             anim.SetBool("moving", false);
@@ -75,12 +73,12 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("falling", true);
         }
 
-        if (rb.velocity.x < -float.Epsilon)
+        if (rb.velocity.x < -1)
         {   
             sr.flipX = true;
             dir = XDirection.Left;
         }
-        else if (rb.velocity.x > float.Epsilon)
+        else if (rb.velocity.x > 1)
         {
             sr.flipX = false;
             dir = XDirection.Right;
@@ -111,6 +109,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
+
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
