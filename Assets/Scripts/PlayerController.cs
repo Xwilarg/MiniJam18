@@ -29,11 +29,11 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
         inter = null;
         externalX = 0f;
         spawnPos = transform.position;
+        dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
     }
 
     private enum XDirection

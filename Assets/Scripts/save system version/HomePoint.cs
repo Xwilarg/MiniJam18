@@ -9,9 +9,10 @@ public class HomePoint : MonoBehaviour
     {
         if(GameManager.instance.events["level00spawn"]) {
           transform.position = new Vector3 (4.5f, -0.5f, 0);
-          GameManager.instance.events["level0spawn"] = false;
+          GameManager.instance.events["level00spawn"] = false;
         } else if (GameManager.instance.events["level01spawn"]){
-          //change spawn point/level
+          transform.position = new Vector3 (4.5f, -0.5f, 0);
+          GameManager.instance.events["level01spawn"] = false;
         } else {
 
         }
