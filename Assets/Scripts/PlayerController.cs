@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer sr;
+    private Animator anim;
     private const float speed = 300f;
     private const float jumpMinDistY = .5f;
     private const float jumpMinDistX = .4f;
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         npcInterraction = null;
         inter = null;
         externalX = 0f;
@@ -45,11 +47,36 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * speed + externalX, rb.velocity.y);
         externalX /= xDrag;
         XDirection dir = XDirection.None;
+
+
+
+        if (rb.velocity.x > 0 || rb.velocity.x < 0 && rb.velocity.y == 0) {
+            anim.SetBool("moving", true);
+        } else {
+            anim.SetBool("moving", false);
+        }
+
+        if (rb.velocity.y == 0) {
+            anim.SetBool("jumping", false);
+            anim.SetBool("falling", false);
+
+        }
+
+        if (rb.velocity.y > 0) {
+            anim.SetBool("jumping", true);
+        }
+
+        if (rb.velocity.y < 0) {
+            anim.SetBool("jumping", false);
+            anim.SetBool("falling", true);
+        }
+
         if (rb.velocity.x < -float.Epsilon)
-        {
+        {   
             sr.flipX = true;
             dir = XDirection.Left;
         }
@@ -60,6 +87,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
+            
             Vector2? raycastDir = null;
             if (dir == XDirection.Right)
                 raycastDir = transform.right;
