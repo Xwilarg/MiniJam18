@@ -8,7 +8,7 @@ TagManager:
   - GameManager
   - Spikes
   - Button
-
+  - HomePoint
   layers:
   - Default
   - TransparentFX
