@@ -45,30 +45,32 @@ public class PlayerController : MonoBehaviour
         Right
     }
 
+    private bool CompareFloat(float x, float value)
+    {
+        return (x > (value - .01f) && x < (value + .01f));
+    }
+
     private void Update()
     {
-
         rb.velocity = new Vector2(Input.GetAxis("Horizontal") * Time.deltaTime * speed + externalX, rb.velocity.y);
         externalX /= xDrag;
         XDirection dir = XDirection.None;
 
-        if (rb.velocity.x > 0.1f || rb.velocity.x < -0.1f && rb.velocity.y == 0) {
+        if (rb.velocity.x > 0.1f || rb.velocity.x < -0.1f && CompareFloat(rb.velocity.y, 0)) {
             anim.SetBool("moving", true);
         } else {
             anim.SetBool("moving", false);
         }
 
-        if (rb.velocity.y == 0) {
+        if (CompareFloat(rb.velocity.y, 0)) {
             anim.SetBool("jumping", false);
             anim.SetBool("falling", false);
 
         }
-
-        if (rb.velocity.y > 0) {
+        else if (rb.velocity.y > 0) {
             anim.SetBool("jumping", true);
         }
-
-        if (rb.velocity.y < 0) {
+        else {
             anim.SetBool("jumping", false);
             anim.SetBool("falling", true);
         }
