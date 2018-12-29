@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
         externalX = 0f;
-        spawnPos = transform.position;
+        //spawnPos = transform.position;
     }
 
     private enum XDirection
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             npcInterraction = collision.GetComponent<NPC>();
             collision.transform.GetChild(0).gameObject.SetActive(true);
         }
-        else if (collision.CompareTag("Spikes"))
+       else if (collision.CompareTag("Spikes"))
             transform.position = spawnPos;
 
     }

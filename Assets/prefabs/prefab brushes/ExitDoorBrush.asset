@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: NPCBrush
+  m_Name: ExitDoorBrush
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 3472762023517423153, guid: d744fde7a65b5294ca95b2816ceebcaf, type: 3}
+  - {fileID: 5889114720151240669, guid: 9b9db7e865c344742b4d3e05c86000ac, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0

@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MoveToLevelNPC : MonoBehaviour
+public class ExitLevelDoor : MonoBehaviour
 {
 
   private bool trigger;
-  public string levelToLoad;
+  public string levelspawn;
+  public string levelToLoad = "World";
 
     
   void Update() {
 
     if(Input.GetKeyDown(KeyCode.E) && trigger) {
+      GameManager.instance.events[levelspawn] = true;
       SceneManager.LoadScene(levelToLoad);
     } 
         
@@ -30,3 +32,4 @@ public class MoveToLevelNPC : MonoBehaviour
     }
   }
 }
+

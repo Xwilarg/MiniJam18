@@ -6,6 +6,12 @@ public class GameManager : MonoBehaviour
 {
  
     public static GameManager instance;
+    private GameObject homePoint;
+    public IDictionary<string, bool> events = new Dictionary<string, bool>() {
+      {"level00spawn", false},
+      {"level01spawn", false}
+
+    };
 
     void Start()
     { 
@@ -15,12 +21,6 @@ public class GameManager : MonoBehaviour
       } else {
         Destroy(this.gameObject);
       }
-        
-    }
-
-    
-    void Update()
-    {
         
     }
 }
