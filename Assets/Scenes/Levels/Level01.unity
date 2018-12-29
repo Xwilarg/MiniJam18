@@ -181,6 +181,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea998a190ad8b69479c0a77feee00eda, type: 3}
+--- !u!1 &42429593 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5889114720151240669, guid: 9b9db7e865c344742b4d3e05c86000ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 705935163}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &42429594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42429593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc19254fc9b34be4ba7866b2a72d5f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: Press E to leave dream.
 --- !u!1001 &91042320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8868,6 +8887,11 @@ PrefabInstance:
       propertyPath: levelspawn
       value: level01spawn
       objectReference: {fileID: 0}
+    - target: {fileID: 6529628815113751994, guid: 9b9db7e865c344742b4d3e05c86000ac,
+        type: 3}
+      propertyPath: objectspawn
+      value: level01object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b9db7e865c344742b4d3e05c86000ac, type: 3}
 --- !u!4 &705935164 stripped
@@ -8897,12 +8921,12 @@ PrefabInstance:
     - target: {fileID: 1903829128576285240, guid: d0e2ff134d0423b4b9184965f195cf25,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4665375
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 1903829128576285240, guid: d0e2ff134d0423b4b9184965f195cf25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5226095
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1903829128576285240, guid: d0e2ff134d0423b4b9184965f195cf25,
         type: 3}
@@ -8995,6 +9019,81 @@ PrefabInstance:
       propertyPath: m_FontSize
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7601018836350559280, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 166563762502365261, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 658235061}
+    - target: {fileID: 166563762502365261, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 166563762502365261, guid: d0e2ff134d0423b4b9184965f195cf25,
+        type: 3}
+      propertyPath: actions.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0e2ff134d0423b4b9184965f195cf25, type: 3}
 --- !u!1001 &949036380
@@ -9066,6 +9165,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea998a190ad8b69479c0a77feee00eda, type: 3}
+--- !u!1 &954761782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1903829128576285243, guid: d0e2ff134d0423b4b9184965f195cf25,
+    type: 3}
+  m_PrefabInstance: {fileID: 764714376}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &954761783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954761782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc19254fc9b34be4ba7866b2a72d5f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  line: Press Q to interact with button.
 --- !u!4 &1026778810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1657717175679666738, guid: ea998a190ad8b69479c0a77feee00eda,

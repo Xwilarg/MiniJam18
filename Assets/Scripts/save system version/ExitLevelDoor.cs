@@ -6,30 +6,35 @@ using UnityEngine.SceneManagement;
 public class ExitLevelDoor : MonoBehaviour
 {
 
-  private bool trigger;
-  public string levelspawn;
-  public string levelToLoad = "World";
+    private bool trigger;
+    public string levelspawn;
+    public string objectspawn;
+    public string levelToLoad = "World";
 
-    
-  void Update() {
+    void Update() {
 
-    if(Input.GetKeyDown(KeyCode.E) && trigger) {
-      GameManager.instance.events[levelspawn] = true;
-      SceneManager.LoadScene(levelToLoad);
-    } 
+        if (Input.GetKeyDown(KeyCode.E) && trigger)
+        {
+            GameManager.instance.events[levelspawn] = true;
+            GameManager.instance.events[objectspawn] = true;
+            UIManager.instance.HideDialog();
+            SceneManager.LoadScene(levelToLoad);
+        } 
         
-  }
-
-  void OnTriggerEnter2D(Collider2D other) {
-    if (other.gameObject.name == "Player") {
-      trigger = true;
     }
-  }
 
-  void OnTriggerExit2D(Collider2D other) {
-    if (other.gameObject.name == "Player") {
-      trigger = false;
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name == "Player")
+        {
+            trigger = true;
+        }
     }
-  }
+
+     void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.name == "Player")
+        {
+            trigger = false;
+        }
+    }
 }
 
