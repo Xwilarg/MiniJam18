@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private DreamManager dm;
 
     private NPC npcInterraction;
+    private Interruptor inter;
 
     private float externalX;
 
@@ -28,8 +29,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        //dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
+        dm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<DreamManager>();
         npcInterraction = null;
+        inter = null;
         externalX = 0f;
         spawnPos = transform.position;
     }
@@ -86,11 +88,25 @@ public class PlayerController : MonoBehaviour
         {
             if (!isMain)
             {
-                transform.position = spawnPos;
+                Die();
                 dm.LoadMain();
             }
             else if (npcInterraction != null)
                 dm.LoadScene(npcInterraction.Id);
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && inter != null)
+        {
+            inter.Activate();
+        }
+    }
+
+    private void Die()
+    {
+        transform.position = spawnPos;
+        if (inter != null)
+        {
+            inter.transform.GetChild(0).gameObject.SetActive(false);
+            inter = null;
         }
     }
 
@@ -101,9 +117,13 @@ public class PlayerController : MonoBehaviour
             npcInterraction = collision.GetComponent<NPC>();
             collision.transform.GetChild(0).gameObject.SetActive(true);
         }
-       else if (collision.CompareTag("Spikes")) {
-            transform.position = spawnPos;
-       }
+        else if (collision.CompareTag("Spikes"))
+            Die();
+        else if (collision.CompareTag("Button"))
+        {
+            inter = collision.GetComponent<Interruptor>();
+            collision.transform.GetChild(0).gameObject.SetActive(true);
+        }
 
     }
 
@@ -112,6 +132,11 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("NPC"))
         {
             npcInterraction = null;
+            collision.transform.GetChild(0).gameObject.SetActive(false);
+        }
+        else if (collision.CompareTag("Button"))
+        {
+            inter = null;
             collision.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
