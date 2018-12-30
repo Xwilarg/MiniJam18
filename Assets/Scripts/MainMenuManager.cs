@@ -32,4 +32,9 @@ public class MainMenuManager : MonoBehaviour
         credits.SetActive(false);
         main.SetActive(true);
     }
+
+    public void EndBack()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
