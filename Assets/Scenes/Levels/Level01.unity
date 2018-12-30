@@ -9183,7 +9183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc19254fc9b34be4ba7866b2a72d5f2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  line: Press Q to interact with button.
+  line: Press Q to interact with the button. Press Space to Jump.
 --- !u!4 &1026778810 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1657717175679666738, guid: ea998a190ad8b69479c0a77feee00eda,

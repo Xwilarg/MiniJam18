@@ -11,7 +11,7 @@ public class HomePoint : MonoBehaviour
           transform.position = new Vector3 (4.5f, -0.5f, 0);
           GameManager.instance.events["level00spawn"] = false;
         } else if (GameManager.instance.events["level01spawn"]){
-          transform.position = new Vector3 (4.5f, -0.5f, 0);
+          transform.position = new Vector3 (2.5f, -0.5f, 0);
           GameManager.instance.events["level01spawn"] = false;
         } else {
 
