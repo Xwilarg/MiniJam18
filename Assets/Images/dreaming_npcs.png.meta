@@ -10,6 +10,10 @@ TextureImporter:
     21300010: dreaming_npcs_5
     21300012: dreaming_npcs_6
     21300014: dreaming_npcs_7
+    21300016: dreaming_npcs_8
+    21300018: dreaming_npcs_9
+    21300020: dreaming_npcs_10
+    21300022: dreaming_npcs_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -129,6 +133,86 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef97b02965750934e969490e0f8974f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreaming_npcs_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 991c95030e64dd242845ddd4bfa6cfbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreaming_npcs_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb74a16300605f642b9530fae335d1b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreaming_npcs_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41edafa2d2953964ea152db12793623b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dreaming_npcs_4
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 16
         width: 16
         height: 16
@@ -139,13 +223,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3816f0c4a7fc26342b6c16bc669f8968
+      spriteID: a594c0bb59331ba45a1d41dd3e342a52
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_1
+      name: dreaming_npcs_5
       rect:
         serializedVersion: 2
         x: 16
@@ -159,13 +243,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67673e35cfe4c3f4890181dd0ae2dea4
+      spriteID: cc064be0939bd3549971f4f03a6c673b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_2
+      name: dreaming_npcs_6
       rect:
         serializedVersion: 2
         x: 32
@@ -179,13 +263,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a452bb7bf172c142a4faa2c24fa8bc2
+      spriteID: 4f64dc8cb36b2cd40a6da68bcf32a9bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_3
+      name: dreaming_npcs_7
       rect:
         serializedVersion: 2
         x: 48
@@ -199,13 +283,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f358654ece0a443b8b3fc7044d30d1
+      spriteID: 506594d1217eb5d44ac062b51caea17c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_4
+      name: dreaming_npcs_8
       rect:
         serializedVersion: 2
         x: 0
@@ -219,13 +303,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd24fd05097bffb44ba2d22a704d1d50
+      spriteID: ebc86241ad589464c98577875e2e2ee5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_5
+      name: dreaming_npcs_9
       rect:
         serializedVersion: 2
         x: 16
@@ -239,13 +323,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ced1217b995337e49b89aa3f7680eedb
+      spriteID: 6e526da0c216b4246beab8fe3acfe7ab
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_6
+      name: dreaming_npcs_10
       rect:
         serializedVersion: 2
         x: 32
@@ -259,13 +343,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7013a289e22f196459fb860d763135f1
+      spriteID: 18348a395e45f854189a3748da2a5dc2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dreaming_npcs_7
+      name: dreaming_npcs_11
       rect:
         serializedVersion: 2
         x: 48
@@ -279,7 +363,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74a47c8954dac7e418581fbe36cd8247
+      spriteID: 7e1bfb7d10a8bdc4ba9559e481ba7c21
       vertices: []
       indices: 
       edges: []
