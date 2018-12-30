@@ -638,7 +638,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9985,6 +9985,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529628815113751994, guid: 9b9db7e865c344742b4d3e05c86000ac,
+        type: 3}
+      propertyPath: levelspawn
+      value: level05spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 6529628815113751994, guid: 9b9db7e865c344742b4d3e05c86000ac,
+        type: 3}
+      propertyPath: objectspawn
+      value: level05object
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b9db7e865c344742b4d3e05c86000ac, type: 3}
@@ -23645,7 +23655,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
