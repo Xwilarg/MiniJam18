@@ -10,7 +10,7 @@
 [WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x14f3e3808 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x158ab7c08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,53 +18,297 @@
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             : exinfo->length             = 2542912
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 2559200
 [LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 22528
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000c7c37bc
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x70000c8de7bc
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1590c1885
 [LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x1590c1941
 [LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1590c1971
 [LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x1590c1a0e
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x14fa207d8
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x14e88fee8
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
-[LOG] SystemI::createSoundInternal             : Sample 0/1: name='click-select-2', format=2, channels=2, frequency=48000, lengthbytes=15552, lengthpcm=142376, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.141638.
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='click-select-3', format=2, channels=2, frequency=48000, lengthbytes=31840, lengthpcm=96000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.350358.
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
 [LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x1420ec208 : node = 0x156540910
-[LOG] SystemI::createSound                     : add node to async list : head = 0x13e8fa5f8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x1420ec208
+[LOG] SystemI::createSound                     : setdata soundi = 0x14e88e018 : node = 0x14e88f110
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14e88d518 : node = 0x14e88f250
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14e88e018
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSound                     :     setdata soundi = 0x12181ee38 : node = 0x121806980
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x164781b98.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14e88f228
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Viola Melody', format=2, channels=2, frequency=48000, lengthbytes=563616, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.298242.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14e88e018
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14e88d518
 [LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2542912
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x156540a28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14e88f368
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Organ Accompaniment', format=2, channels=2, frequency=48000, lengthbytes=382560, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.638923.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14e88d518
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x12181ee38
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x121806a98
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Star Chimes', format=2, channels=2, frequency=48000, lengthbytes=677984, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.028489.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x12181ee38
+[LOG] SoundI::getSubSound                      : sound 0x14e88e018.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x14e88d518.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x12181ee38.  Subsound index 0 / 1
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] Manager::readBank                        : fileversion = 103, compatVersion = 99 (oldest = 44, newest = 103)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14ec35a08 : node = 0x14ec08e30
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14ec35a08
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14ec08f48
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x1420ec208
-[LOG] SoundI::getSubSound                      : sound 0x1420ec208.  Subsound index 0 / 1
-[LOG] SoundI::release                          : Sparkly Chimes (0x1420ec208)
-[LOG] SoundI::release                          :     Sparkly Chimes (0x159e2b5f8)
-[LOG] SoundI::release                          :     Sparkly Chimes (0x1647daf68)
-[LOG] SoundI::release                          : Sparkly Chimes (0x158641768)
-[LOG] SoundI::release                          :     Sparkly Chimes (0x159eaeb88)
-[LOG] SoundI::release                          :     Sparkly Chimes (0x1647478a8)
-[LOG] SoundI::release                          :  (0x14fa2b0c8)
-[LOG] SoundI::release                          :     click-select-2 (0x14fa21ec8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14ec35a08
+[LOG] SoundI::getSubSound                      : sound 0x14ec35a08.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14f88d9f8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14ec6e898)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x156568f48)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14e88c138 : node = 0x14e88c2f0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14e88c138
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14e88c408
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14e88c138
+[LOG] SoundI::getSubSound                      : sound 0x14e88c138.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14ec35a08)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14e88e8a8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14e88bf98)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14f88b828 : node = 0x14f8c0480
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14f88b828
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14f8c0598
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14f88b828
+[LOG] SoundI::getSubSound                      : sound 0x14f88b828.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14e88c138)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14ecbb6d8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14ecbb868)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14ec6e898 : node = 0x14ec35e90
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14ec6e898
+[LOG] SystemI::createSound                     : setdata soundi = 0x10d23d4f8 : node = 0x14ec34780
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x164781b98.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSound                     :     filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSound                     :     setdata soundi = 0x12c7bf148 : node = 0x156568f60
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x164781b98.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14ec35fa8
+[LOG] SystemI::createSound                     :     filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 11880
+[LOG] SystemI::createSound                     :     setdata soundi = 0x14e88eed8 : node = 0x14e88ce40
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 0x164781b98.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Dream Harp', format=2, channels=2, frequency=48000, lengthbytes=674432, lengthpcm=2851485, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.248162.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14ec6e898
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x10d23d4f8
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14ec34898
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Viola Melody', format=2, channels=2, frequency=48000, lengthbytes=563616, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.298242.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x10d23d4f8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x12c7bf148
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x156569078
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Organ Accompaniment', format=2, channels=2, frequency=48000, lengthbytes=382560, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.638923.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x12c7bf148
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14e88eed8
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14e88cf58
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Star Chimes', format=2, channels=2, frequency=48000, lengthbytes=677984, lengthpcm=2281187, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.028489.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14e88eed8
+[LOG] SoundI::getSubSound                      : sound 0x14ec6e898.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x10d23d4f8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x12c7bf148.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 0x14e88eed8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Dream Harp (0x164777b78)
+[LOG] SoundI::release                          :     Dream Harp (0x14f9496b8)
+[LOG] SoundI::release                          :     Dream Harp (0x14f949848)
+[LOG] SoundI::release                          : Viola Melody (0x14e88e018)
+[LOG] SoundI::release                          :     Viola Melody (0x14f955268)
+[LOG] SoundI::release                          :     Viola Melody (0x14f9553f8)
+[LOG] SoundI::release                          : Organ Accompaniment (0x14e88d518)
+[LOG] SoundI::release                          :     Organ Accompaniment (0x1420299b8)
+[LOG] SoundI::release                          :     Organ Accompaniment (0x142029b48)
+[LOG] SoundI::release                          : Star Chimes (0x12181ee38)
+[LOG] SoundI::release                          :     Star Chimes (0x14202a2a8)
+[LOG] SoundI::release                          :     Star Chimes (0x14202a438)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14e88e018 : node = 0x14e88b4e0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14e88e018
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14e88b5f8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14e88e018
+[LOG] SoundI::getSubSound                      : sound 0x14e88e018.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14f88b828)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x15bf54898)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x15bf54a28)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14f99d718 : node = 0x15bfb5b10
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14f99d718
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x15bfb5c28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14f99d718
+[LOG] SoundI::getSubSound                      : sound 0x14f99d718.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14e88e018)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x1586bc688)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x1647d43a8)
+[LOG] SystemI::createSound                     : filename = /Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x14ec4a9c8 : node = 0x14ec34250
+[LOG] SystemI::createSound                     : add node to async list : head = 0x164781b98.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x14ec4a9c8
+[LOG] SystemI::createSoundInternal             :     Create name='/Users/amerlynzeta/Projects/Dream Hop/Dream Hop/Build/Desktop/Master Bank.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2559200
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 22528
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x14ec34368
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Sparkly Chimes', format=2, channels=2, frequency=48000, lengthbytes=224064, lengthpcm=768000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.044908.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x14ec4a9c8
+[LOG] SoundI::getSubSound                      : sound 0x14ec4a9c8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : Sparkly Chimes (0x14f99d718)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x13e7463d8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x14ecb1a98)
+[LOG] SoundI::release                          : Sparkly Chimes (0x14ec4a9c8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x142029ac8)
+[LOG] SoundI::release                          :     Sparkly Chimes (0x142029c58)
+[LOG] SoundI::release                          : Star Chimes (0x14e88eed8)
+[LOG] SoundI::release                          :     Star Chimes (0x10d48ffd8)
+[LOG] SoundI::release                          :     Star Chimes (0x14f86a098)
+[LOG] SoundI::release                          : Organ Accompaniment (0x12c7bf148)
+[LOG] SoundI::release                          :     Organ Accompaniment (0x14f837828)
+[LOG] SoundI::release                          :     Organ Accompaniment (0x14f8695a8)
+[LOG] SoundI::release                          : Viola Melody (0x10d23d4f8)
+[LOG] SoundI::release                          :     Viola Melody (0x1586f1ba8)
+[LOG] SoundI::release                          :     Viola Melody (0x1647e6508)
+[LOG] SoundI::release                          : Dream Harp (0x14ec6e898)
+[LOG] SoundI::release                          :     Dream Harp (0x13e845f28)
+[LOG] SoundI::release                          :     Dream Harp (0x14f8449d8)
+[LOG] SoundI::release                          :  (0x14e895da8)
+[LOG] SoundI::release                          :     click-select-3 (0x14e890328)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -74,13 +318,4 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.
 [LOG] SystemI::close                           : Closed.
