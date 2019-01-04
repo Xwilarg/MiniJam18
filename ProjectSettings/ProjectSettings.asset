@@ -44,8 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
-  defaultScreenWidthWeb: 200
-  defaultScreenHeightWeb: 180
+  defaultScreenWidthWeb: 400
+  defaultScreenHeightWeb: 360
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -489,7 +489,8 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: 3
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

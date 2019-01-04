@@ -4,10 +4,10 @@
 [RequireComponent(typeof(SpriteRenderer))]
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
-    private const float speed = 300f;
+    public const float speed = 300f;
     private const float jumpMinDistY = .5f;
     private const float jumpMinDistX = .4f;
     private const float jumpForce = 5f;
@@ -23,14 +23,18 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private bool isMain;
+    private AudioSource audioS;
+    public AudioClip jump;
 
     private Vector2 spawnPos;
+    public bool onFloor;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        audioS = GetComponent<AudioSource>();
         npcInterraction = null;
         inter = null;
         externalX = 0f;
@@ -87,7 +91,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump"))
         {
-            
+            audioS.PlayOneShot(jump);
             Vector2? raycastDir = null;
             if (dir == XDirection.Right)
                 raycastDir = transform.right;
@@ -95,7 +99,7 @@ public class PlayerController : MonoBehaviour
                 raycastDir = -transform.right;
             bool isDone = false;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, -transform.up, jumpMinDistY, 1 << 8);
-            bool onFloor = (hit.distance > float.Epsilon);
+           onFloor = (hit.distance > float.Epsilon);
             if (raycastDir != null && !onFloor)
             {
                 RaycastHit2D hitWall = Physics2D.Raycast(transform.position, raycastDir.Value, jumpMinDistX, 1 << 8);
